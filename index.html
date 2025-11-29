@@ -11,8 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/index-zp7nWLuT.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DHy1QGRK.css">
+  <script type="module" crossorigin src="./assets/index-CaGN_YXz.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ZTt90gcW.css">
 </head>
 
 <body>
@@ -65,7 +65,30 @@
                         <input type="file" id="json-upload" accept=".json">
                     </div>
                     <div class="setting-item">
+                        <button id="change-level-btn" class="level-btn" style="width: 100%;">Change Level</button>
+                    </div>
+                    <div class="setting-item">
                         <button id="reset-progress" class="danger-btn">Reset Progress</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="level-selection-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Select Difficulty</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="level-options">
+                        <button class="level-btn" data-level="level1">
+                            <span class="level-title">Level 1</span>
+                            <span class="level-desc">Beginner (60 Words)</span>
+                        </button>
+                        <button class="level-btn" data-level="level2">
+                            <span class="level-title">Level 2</span>
+                            <span class="level-desc">Advanced (Original)</span>
+                        </button>
                     </div>
                 </div>
             </div>
