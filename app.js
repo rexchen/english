@@ -1,7 +1,10 @@
+import defaultWords from './word.json';
+import defaultDictionary from './dictionary.json';
+
 document.addEventListener('DOMContentLoaded', () => {
     // State
     let words = [];
-    let dictionary = {};
+    let dictionary = defaultDictionary;
     let knownWords = JSON.parse(localStorage.getItem('vocab_known')) || [];
     let unknownWords = JSON.parse(localStorage.getItem('vocab_unknown')) || [];
     let currentWordIndex = 0;
@@ -28,10 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function init() {
         try {
-            // Load Dictionary
-            const dictResponse = await fetch('dictionary.json');
-            dictionary = await dictResponse.json();
-
             // Load Words
             await loadWords();
 
@@ -46,8 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (customList) {
             words = customList;
         } else {
-            const response = await fetch('word.json');
-            words = await response.json();
+            words = defaultWords;
         }
 
         // Filter out known words to create the active learning list
