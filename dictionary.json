@@ -1,371 +1,463 @@
 {
     "ace": {
         "zh": "王牌",
-        "ipa": "/eɪs/"
+        "ipa": "/eɪs/",
+        "en": "A playing card with a single spot on it, ranked as the highest card in its suit in most card games."
     },
     "actor": {
         "zh": "演員",
-        "ipa": "/ˈæktər/"
+        "ipa": "/ˈæktər/",
+        "en": "A person whose profession is acting on the stage, in movies, or on television."
     },
     "almond": {
         "zh": "杏仁",
-        "ipa": "/ˈɑːmənd/"
+        "ipa": "/ˈɑːmənd/",
+        "en": "The oval nutlike seed (kernel) of the almond tree, growing in a woody shell."
     },
     "alphabet": {
         "zh": "字母表",
-        "ipa": "/ˈælfəbet/"
+        "ipa": "/ˈælfəbet/",
+        "en": "A set of letters or symbols in a fixed order, used to represent the basic sounds of a language."
     },
     "amount": {
         "zh": "數量",
-        "ipa": "/əˈmaʊnt/"
+        "ipa": "/əˈmaʊnt/",
+        "en": "A quantity of something, typically the total of a thing or things in number, size, value, or extent."
     },
     "arrow": {
         "zh": "箭",
-        "ipa": "/ˈærəʊ/"
+        "ipa": "/ˈærəʊ/",
+        "en": "A shaft sharpened at the front and with feathers or vanes at the back, shot from a bow as a weapon or for sport."
     },
     "article": {
         "zh": "文章",
-        "ipa": "/ˈɑːrtɪkl/"
+        "ipa": "/ˈɑːrtɪkl/",
+        "en": "A piece of writing included with others in a newspaper, magazine, or other publication."
     },
     "badger": {
         "zh": "獾",
-        "ipa": "/ˈbædʒər/"
+        "ipa": "/ˈbædʒər/",
+        "en": "A heavily built omnivorous nocturnal mammal of the weasel family, typically having a grey and black coat."
     },
     "barber": {
         "zh": "理髮師",
-        "ipa": "/ˈbɑːrbər/"
+        "ipa": "/ˈbɑːrbər/",
+        "en": "A person who cuts men's hair and shaves or trims beards as an occupation."
     },
     "basic": {
         "zh": "基本的",
-        "ipa": "/ˈbeɪsɪk/"
+        "ipa": "/ˈbeɪsɪk/",
+        "en": "Forming an essential foundation or starting point; fundamental."
     },
     "battle": {
         "zh": "戰鬥",
-        "ipa": "/ˈbætl/"
+        "ipa": "/ˈbætl/",
+        "en": "A sustained fight between large, organized armed forces."
     },
     "beginner": {
         "zh": "初學者",
-        "ipa": "/bɪˈɡɪnər/"
+        "ipa": "/bɪˈɡɪnər/",
+        "en": "A person just starting to learn a skill or take part in an activity."
     },
     "bind": {
         "zh": "捆綁",
-        "ipa": "/baɪnd/"
+        "ipa": "/baɪnd/",
+        "en": "Tie or fasten (something) tightly."
     },
     "borrow": {
         "zh": "借入",
-        "ipa": "/ˈbɔːrəʊ/"
+        "ipa": "/ˈbɔːrəʊ/",
+        "en": "Take and use (something that belongs to someone else) with the intention of returning it."
     },
     "bother": {
         "zh": "打擾",
-        "ipa": "/ˈbɑːðər/"
+        "ipa": "/ˈbɑːðər/",
+        "en": "Take the trouble to do something."
     },
     "cactus": {
         "zh": "仙人掌",
-        "ipa": "/ˈkæktəs/"
+        "ipa": "/ˈkæktəs/",
+        "en": "A succulent plant with a thick, fleshy stem that typically bears spines, lacks leaves, and is frequently native to arid regions."
     },
     "cartoon": {
         "zh": "卡通",
-        "ipa": "/kɑːrˈtuːn/"
+        "ipa": "/kɑːrˈtuːn/",
+        "en": "A motion picture using animation techniques to photograph a sequence of drawings rather than real people or objects."
     },
     "center": {
         "zh": "中心",
-        "ipa": "/ˈsentər/"
+        "ipa": "/ˈsentər/",
+        "en": "The middle point of a circle or sphere, equidistant from every point on the circumference or surface."
     },
     "checkers": {
         "zh": "跳棋",
-        "ipa": "/ˈtʃekərz/"
+        "ipa": "/ˈtʃekərz/",
+        "en": "A board game for two players, each beginning with twelve pieces of one color that are placed on the board."
     },
     "chimney": {
         "zh": "煙囪",
-        "ipa": "/ˈtʃɪmni/"
+        "ipa": "/ˈtʃɪmni/",
+        "en": "A vertical channel or pipe that conducts smoke and combustion gases up from a fire or furnace."
     },
     "claim": {
         "zh": "聲稱",
-        "ipa": "/kleɪm/"
+        "ipa": "/kleɪm/",
+        "en": "State or assert that something is the case, typically without providing evidence or proof."
     },
     "clerk": {
         "zh": "店員",
-        "ipa": "/klɜːrk/"
+        "ipa": "/klɜːrk/",
+        "en": "A person employed in an office or bank to keep records and accounts and to undertake other routine administrative duties."
     },
     "click": {
         "zh": "點擊",
-        "ipa": "/klɪk/"
+        "ipa": "/klɪk/",
+        "en": "A short, sharp sound as of a switch being operated or of two hard objects coming smartly into contact."
     },
     "cliff": {
         "zh": "懸崖",
-        "ipa": "/klɪf/"
+        "ipa": "/klɪf/",
+        "en": "A steep rock face, especially at the edge of the sea."
     },
     "clue": {
         "zh": "線索",
-        "ipa": "/kluː/"
+        "ipa": "/kluː/",
+        "en": "A piece of evidence or information used in the detection of a crime or solving of a mystery."
     },
     "cocoon": {
         "zh": "繭",
-        "ipa": "/kəˈkuːn/"
+        "ipa": "/kəˈkuːn/",
+        "en": "A silky case spun by the larvae of many insects for protection in the pupal stage."
     },
     "control": {
         "zh": "控制",
-        "ipa": "/kənˈtroʊl/"
+        "ipa": "/kənˈtroʊl/",
+        "en": "The power to influence or direct people's behavior or the course of events."
     },
     "corner": {
         "zh": "角落",
-        "ipa": "/ˈkɔːrnər/"
+        "ipa": "/ˈkɔːrnər/",
+        "en": "A place or angle where two or more sides or edges meet."
     },
     "cue": {
         "zh": "提示",
-        "ipa": "/kjuː/"
+        "ipa": "/kjuː/",
+        "en": "A thing said or done that serves as a signal to an actor or other performer to enter or to begin their speech or performance."
     },
     "daydream": {
         "zh": "白日夢",
-        "ipa": "/ˈdeɪdriːm/"
+        "ipa": "/ˈdeɪdriːm/",
+        "en": "A series of pleasant thoughts that distract one's attention from the present."
     },
     "disk": {
         "zh": "磁盤",
-        "ipa": "/dɪsk/"
+        "ipa": "/dɪsk/",
+        "en": "A flat, thin, round object."
     },
     "drill": {
         "zh": "鑽孔",
-        "ipa": "/drɪl/"
+        "ipa": "/drɪl/",
+        "en": "A hand tool, power tool, or machine with a rotating cutting tip or reciprocating hammer or chisel, used for making holes."
     },
     "dust": {
         "zh": "灰塵",
-        "ipa": "/dʌst/"
+        "ipa": "/dʌst/",
+        "en": "Fine powder made from waste material or earth."
     },
     "enemy": {
         "zh": "敵人",
-        "ipa": "/ˈenəmi/"
+        "ipa": "/ˈenəmi/",
+        "en": "A person who is actively opposed or hostile to someone or something."
     },
     "equal": {
         "zh": "平等的",
-        "ipa": "/ˈiːkwəl/"
+        "ipa": "/ˈiːkwəl/",
+        "en": "Being the same in quantity, size, degree, or value."
     },
     "erase": {
         "zh": "擦除",
-        "ipa": "/ɪˈreɪs/"
+        "ipa": "/ɪˈreɪs/",
+        "en": "Rub out or remove (writing or marks)."
     },
     "example": {
         "zh": "例子",
-        "ipa": "/ɪɡˈzæmpl/"
+        "ipa": "/ɪɡˈzæmpl/",
+        "en": "A thing characteristic of its kind or illustrating a general rule."
     },
     "field": {
         "zh": "田野",
-        "ipa": "/fiːld/"
+        "ipa": "/fiːld/",
+        "en": "An area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences."
     },
     "firefly": {
         "zh": "螢火蟲",
-        "ipa": "/ˈfaɪərflaɪ/"
+        "ipa": "/ˈfaɪərflaɪ/",
+        "en": "A soft-bodied beetle related to the glowworm, the winged male and flightless female of which both have luminescent organs."
     },
     "fireworks": {
         "zh": "煙火",
-        "ipa": "/ˈfaɪərwɜːrks/"
+        "ipa": "/ˈfaɪərwɜːrks/",
+        "en": "A device containing gunpowder and other combustible chemicals that causes a spectacular explosion when ignited."
     },
     "firm": {
         "zh": "公司",
-        "ipa": "/fɜːrm/"
+        "ipa": "/fɜːrm/",
+        "en": "A business concern, especially one involving a partnership of two or more people."
     },
     "flash": {
         "zh": "閃光",
-        "ipa": "/flæʃ/"
+        "ipa": "/flæʃ/",
+        "en": "Shine in a bright but brief, sudden, or intermittent way."
     },
     "flight": {
         "zh": "飛行",
-        "ipa": "/flaɪt/"
+        "ipa": "/flaɪt/",
+        "en": "The action or process of flying through the air."
     },
     "fresh": {
         "zh": "新鮮的",
-        "ipa": "/freʃ/"
+        "ipa": "/freʃ/",
+        "en": "Recently made or obtained; not canned, frozen, or otherwise preserved."
     },
     "giant": {
         "zh": "巨人",
-        "ipa": "/ˈdʒaɪənt/"
+        "ipa": "/ˈdʒaɪənt/",
+        "en": "An imaginary or mythical being of human form but superhuman size."
     },
     "grand": {
         "zh": "宏偉的",
-        "ipa": "/ɡrænd/"
+        "ipa": "/ɡrænd/",
+        "en": "Magnificent and imposing in appearance, size, or style."
     },
     "harbor": {
         "zh": "港口",
-        "ipa": "/ˈhɑːrbər/"
+        "ipa": "/ˈhɑːrbər/",
+        "en": "A place on the coast where vessels may find shelter, especially one protected from rough water by piers, jetties, and other artificial structures."
     },
     "haunt": {
         "zh": "出沒",
-        "ipa": "/hɔːnt/"
+        "ipa": "/hɔːnt/",
+        "en": "(of a ghost) manifest itself at (a place) regularly."
     },
     "history": {
         "zh": "歷史",
-        "ipa": "/ˈhɪstri/"
+        "ipa": "/ˈhɪstri/",
+        "en": "The study of past events, particularly in human affairs."
     },
     "hungry": {
         "zh": "飢餓的",
-        "ipa": "/ˈhʌŋɡri/"
+        "ipa": "/ˈhʌŋɡri/",
+        "en": "Feeling or displaying the need for food."
     },
     "iron": {
         "zh": "鐵",
-        "ipa": "/ˈaɪərn/"
+        "ipa": "/ˈaɪərn/",
+        "en": "A strong, hard magnetic silver-grey metal, much used as a material for construction and manufacturing."
     },
     "island": {
         "zh": "島嶼",
-        "ipa": "/ˈaɪlənd/"
+        "ipa": "/ˈaɪlənd/",
+        "en": "A piece of land surrounded by water."
     },
     "jellyfish": {
         "zh": "水母",
-        "ipa": "/ˈdʒelifɪʃ/"
+        "ipa": "/ˈdʒelifɪʃ/",
+        "en": "A free-swimming marine coelenterate with a jellylike bell- or saucer-shaped body that is typically transparent."
     },
     "knight": {
         "zh": "騎士",
-        "ipa": "/naɪt/"
+        "ipa": "/naɪt/",
+        "en": "(in the Middle Ages) a man who served his sovereign or lord as a mounted soldier in armor."
     },
     "know-how": {
         "zh": "技能",
-        "ipa": "/ˈnoʊ haʊ/"
+        "ipa": "/ˈnoʊ haʊ/",
+        "en": "Practical knowledge or skill; expertise."
     },
     "ladybird": {
         "zh": "瓢蟲",
-        "ipa": "/ˈleɪdibɜːrd/"
+        "ipa": "/ˈleɪdibɜːrd/",
+        "en": "A small beetle with a domed back, typically red or yellow with black spots."
     },
     "lighthouse": {
         "zh": "燈塔",
-        "ipa": "/ˈlaɪthaʊs/"
+        "ipa": "/ˈlaɪthaʊs/",
+        "en": "A tower or other structure containing a beacon light to warn or guide ships at sea."
     },
     "lonely": {
         "zh": "寂寞的",
-        "ipa": "/ˈloʊnli/"
+        "ipa": "/ˈloʊnli/",
+        "en": "Sad because one has no friends or company."
     },
     "maple": {
         "zh": "楓樹",
-        "ipa": "/ˈmeɪpl/"
+        "ipa": "/ˈmeɪpl/",
+        "en": "A tree or shrub with lobed leaves, winged fruits, and hard wood."
     },
     "meter": {
         "zh": "米",
-        "ipa": "/ˈmiːtər/"
+        "ipa": "/ˈmiːtər/",
+        "en": "The fundamental unit of length in the metric system, equal to 100 centimeters or approximately 39.37 inches."
     },
     "middle": {
         "zh": "中間",
-        "ipa": "/ˈmɪdl/"
+        "ipa": "/ˈmɪdl/",
+        "en": "At an equal distance from the extremities of something; central."
     },
     "mole": {
         "zh": "鼴鼠",
-        "ipa": "/moʊl/"
+        "ipa": "/moʊl/",
+        "en": "A small burrowing mammal with dark velvety fur, a long muzzle, and very small eyes."
     },
     "narrow": {
         "zh": "狹窄的",
-        "ipa": "/ˈnæroʊ/"
+        "ipa": "/ˈnæroʊ/",
+        "en": "(of something that is considerably longer than it is wide) of small width."
     },
     "offer": {
         "zh": "提供",
-        "ipa": "/ˈɔːfər/"
+        "ipa": "/ˈɔːfər/",
+        "en": "Present or proffer (something) for (someone) to accept or reject as so desired."
     },
     "onion": {
         "zh": "洋蔥",
-        "ipa": "/ˈʌnjən/"
+        "ipa": "/ˈʌnjən/",
+        "en": "An edible bulb with a pungent taste and smell, composed of several concentric layers."
     },
     "period": {
         "zh": "時期",
-        "ipa": "/ˈpɪriəd/"
+        "ipa": "/ˈpɪriəd/",
+        "en": "A length or portion of time."
     },
     "plain": {
         "zh": "平原",
-        "ipa": "/pleɪn/"
+        "ipa": "/pleɪn/",
+        "en": "Not decorated or elaborate; simple or ordinary in character."
     },
     "powerful": {
         "zh": "強大的",
-        "ipa": "/ˈpaʊərfəl/"
+        "ipa": "/ˈpaʊərfəl/",
+        "en": "Having great power or strength."
     },
     "pretend": {
         "zh": "假裝",
-        "ipa": "/prɪˈtend/"
+        "ipa": "/prɪˈtend/",
+        "en": "Speak and act so as to make it appear that something is the case when in fact it is not."
     },
     "pride": {
         "zh": "驕傲",
-        "ipa": "/praɪd/"
+        "ipa": "/praɪd/",
+        "en": "A feeling or deep pleasure or satisfaction derived from one's own achievements."
     },
     "recess": {
         "zh": "休息",
-        "ipa": "/ˈriːses/"
+        "ipa": "/ˈriːses/",
+        "en": "A period of time when the proceedings of a parliament, committee, court of law, or other official body are temporarily suspended."
     },
     "record": {
         "zh": "記錄",
-        "ipa": "/ˈrekərd/"
+        "ipa": "/ˈrekərd/",
+        "en": "A thing constituting a piece of evidence about the past, especially an account of an act or occurrence kept in writing or some other permanent form."
     },
     "result": {
         "zh": "結果",
-        "ipa": "/rɪˈzʌlt/"
+        "ipa": "/rɪˈzʌlt/",
+        "en": "A consequence, effect, or outcome of something."
     },
     "rude": {
         "zh": "粗魯的",
-        "ipa": "/ruːd/"
+        "ipa": "/ruːd/",
+        "en": "Offensively impolite or ill-mannered."
     },
     "season": {
         "zh": "季節",
-        "ipa": "/ˈsiːzn/"
+        "ipa": "/ˈsiːzn/",
+        "en": "Each of the four divisions of the year (spring, summer, autumn, and winter)."
     },
     "settle": {
         "zh": "定居",
-        "ipa": "/ˈsetl/"
+        "ipa": "/ˈsetl/",
+        "en": "Resolve or reach an agreement about (an argument or problem)."
     },
     "share": {
         "zh": "分享",
-        "ipa": "/ʃer/"
+        "ipa": "/ʃer/",
+        "en": "A part or portion of a larger amount which is divided among a number of people, or to which a number of people contribute."
     },
     "speech": {
         "zh": "演講",
-        "ipa": "/spiːtʃ/"
+        "ipa": "/spiːtʃ/",
+        "en": "The expression of or the ability to express thoughts and feelings by articulate sounds."
     },
     "steak": {
         "zh": "牛排",
-        "ipa": "/steɪk/"
+        "ipa": "/steɪk/",
+        "en": "High-quality beef taken from the hindquarters of the animal, typically cut into thick slices that are cooked by broiling or frying."
     },
     "steel": {
         "zh": "鋼鐵",
-        "ipa": "/stiːl/"
+        "ipa": "/stiːl/",
+        "en": "A hard, strong, grey or bluish-grey alloy of iron with carbon and usually other elements."
     },
     "Stone Age": {
         "zh": "石器時代",
-        "ipa": "/ˈstoʊn eɪdʒ/"
+        "ipa": "/ˈstoʊn eɪdʒ/",
+        "en": "A prehistoric period when weapons and tools were made of stone or of organic materials such as bone, wood, or horn."
     },
     "strawberry": {
         "zh": "草莓",
-        "ipa": "/ˈstrɔːberi/"
+        "ipa": "/ˈstrɔːberi/",
+        "en": "A sweet soft red fruit with a seed-studded surface."
     },
     "success": {
         "zh": "成功",
-        "ipa": "/səkˈses/"
+        "ipa": "/səkˈses/",
+        "en": "The accomplishment of an aim or purpose."
     },
     "sundown": {
         "zh": "日落",
-        "ipa": "/ˈsʌndaʊn/"
+        "ipa": "/ˈsʌndaʊn/",
+        "en": "The time in the evening when the sun disappears or daylight fades."
     },
     "sunlit": {
         "zh": "陽光照射的",
-        "ipa": "/ˈsʌnlɪt/"
+        "ipa": "/ˈsʌnlɪt/",
+        "en": "Illuminated by direct light from the sun."
     },
     "sunrise": {
         "zh": "日出",
-        "ipa": "/ˈsʌnraɪz/"
+        "ipa": "/ˈsʌnraɪz/",
+        "en": "The time in the morning when the sun appears or full daylight arrives."
     },
     "supper": {
         "zh": "晚餐",
-        "ipa": "/ˈsʌpər/"
+        "ipa": "/ˈsʌpər/",
+        "en": "An evening meal, typically a light or informal one."
     },
     "telephone": {
         "zh": "電話",
-        "ipa": "/ˈtelɪfoʊn/"
+        "ipa": "/ˈtelɪfoʊn/",
+        "en": "A system for transmitting voices over a distance using wire or radio, by converting acoustic vibrations to electrical signals."
     },
     "thirsty": {
         "zh": "口渴的",
-        "ipa": "/ˈθɜːrsti/"
+        "ipa": "/ˈθɜːrsti/",
+        "en": "Feeling a need to drink."
     },
     "thread": {
         "zh": "線",
-        "ipa": "/θred/"
+        "ipa": "/θred/",
+        "en": "A long, thin strand of cotton, nylon, or other fibers used in sewing or weaving."
     },
     "toilet": {
         "zh": "廁所",
-        "ipa": "/ˈtɔɪlət/"
+        "ipa": "/ˈtɔɪlət/",
+        "en": "A fixed receptacle into which a person may urinate or defecate, typically consisting of a large bowl with a flushing mechanism."
     },
     "total": {
         "zh": "總計",
-        "ipa": "/ˈtoʊtl/"
+        "ipa": "/ˈtoʊtl/",
+        "en": "Comprising the whole number or amount."
     },
     "trash": {
         "zh": "垃圾",
@@ -373,30 +465,37 @@
     },
     "value": {
         "zh": "價值",
-        "ipa": "/ˈvæljuː/"
+        "ipa": "/ˈvæljuː/",
+        "en": "The importance, worth, or usefulness of something."
     },
     "vote": {
         "zh": "投票",
-        "ipa": "/voʊt/"
+        "ipa": "/voʊt/",
+        "en": "A formal indication of a choice between two or more candidates or courses of action, expressed typically through a ballot or a show of hands."
     },
     "wasp": {
         "zh": "黃蜂",
-        "ipa": "/wɑːsp/"
+        "ipa": "/wɑːsp/",
+        "en": "A social winged insect which has a narrow waist and a sting and is typically yellow with black stripes."
     },
     "wildcat": {
         "zh": "野貓",
-        "ipa": "/ˈwaɪldkæt/"
+        "ipa": "/ˈwaɪldkæt/",
+        "en": "A small cat native to Europe, Africa, and Western Asia."
     },
     "willow": {
         "zh": "柳樹",
-        "ipa": "/ˈwɪloʊ/"
+        "ipa": "/ˈwɪloʊ/",
+        "en": "A tree or shrub of temperate climates that typically has narrow leaves, bears catkins, and grows near water."
     },
     "yourself": {
         "zh": "你自己",
-        "ipa": "/jɔːrˈself/"
+        "ipa": "/jɔːrˈself/",
+        "en": "Used to refer to the person being addressed as the object of a verb or preposition when they are also the subject of the clause."
     },
     "youth": {
         "zh": "青年",
-        "ipa": "/juːθ/"
+        "ipa": "/juːθ/",
+        "en": "The period between childhood and adult age."
     }
 }

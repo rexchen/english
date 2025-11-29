@@ -276,11 +276,13 @@ body {
 
 /* Action Bar */
 .action-bar {
-    height: 80px;
+    height: 100px;
+    /* Increased height */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 16px 20px 16px;
+    /* Added bottom padding to move buttons up */
     border-top: 1px solid #444;
     background-color: #2a2a2a;
 }

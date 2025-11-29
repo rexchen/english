@@ -68,8 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCard(word) {
         if (!word) return;
 
-        const data = dictionary[word] || { zh: '...', ipa: '' };
-        const imageUrl = `https://image.pollinations.ai/prompt/${word}%20fantasy%20art%20illustration%20magic%20the%20gathering%20style?width=400&height=300&nologo=true`;
+        const data = dictionary[word] || { zh: '...', ipa: '', en: '' };
+        // Use English definition in prompt for better accuracy
+        const prompt = `${word} ${data.en} fantasy art illustration magic the gathering style`;
+        const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=400&height=300&nologo=true`;
 
         const cardHtml = `
             <div class="card" id="current-card">
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="mtg-text-box">
                             <p class="mtg-definition">${data.zh}</p>
                             <div class="mtg-flavor-text">
-                                "The meaning of this word is ancient and powerful."
+                                "${data.en || 'The meaning of this word is ancient and powerful.'}"
                             </div>
                         </div>
                     </div>
@@ -116,8 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Preload next image
         if (activeWords.length > 1) {
             const nextWord = activeWords[1];
+            const nextData = dictionary[nextWord] || { en: '' };
+            const nextPrompt = `${nextWord} ${nextData.en} fantasy art illustration magic the gathering style`;
             const nextImg = new Image();
-            nextImg.src = `https://image.pollinations.ai/prompt/${nextWord}%20fantasy%20art%20illustration%20magic%20the%20gathering%20style?width=400&height=300&nologo=true`;
+            nextImg.src = `https://image.pollinations.ai/prompt/${encodeURIComponent(nextPrompt)}?width=400&height=300&nologo=true`;
         }
     }
 
