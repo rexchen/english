@@ -1,14 +1,16 @@
 :root {
     --primary-color: #0095f6;
     --text-main: #262626;
-    --text-secondary: #8e8e8e;
-    --bg-color: #fafafa;
-    --card-bg: #ffffff;
-    --border-color: #dbdbdb;
-    --success-color: #4caf50;
-    --danger-color: #f44336;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --bg-color: #222;
+
+    /* MTG Artifact Colors */
+    --mtg-black: #000000;
+    --mtg-silver-light: #dcdcdc;
+    --mtg-silver-mid: #a9a9a9;
+    --mtg-silver-dark: #787878;
+    --mtg-text-box-bg: #d8d8d8;
+    /* Light grey for text box */
+    --mtg-border-pinline: #707070;
 }
 
 * {
@@ -19,12 +21,11 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Merriweather', serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     height: 100vh;
     overflow: hidden;
-    /* Prevent scrolling on body */
     display: flex;
     justify-content: center;
 }
@@ -32,13 +33,12 @@ body {
 .app-container {
     width: 100%;
     max-width: 480px;
-    /* Mobile width limit */
     height: 100%;
-    background-color: var(--card-bg);
+    background-color: #333;
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Header */
@@ -48,16 +48,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--card-bg);
+    border-bottom: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fff;
     z-index: 10;
 }
 
 .logo {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 1.5rem;
-    letter-spacing: -0.5px;
+    color: #dcdcdc;
+    /* Silver */
 }
 
 .icon-btn {
@@ -65,13 +67,9 @@ body {
     border: none;
     cursor: pointer;
     padding: 8px;
-    color: var(--text-main);
+    color: #fff;
     border-radius: 50%;
     transition: background-color 0.2s;
-}
-
-.icon-btn:active {
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Main Card Area */
@@ -80,70 +78,200 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
 }
 
+/* MTG Card Pixel Perfect Style */
 .card {
     width: 100%;
-    height: 100%;
-    max-height: 600px;
-    background: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    max-width: 375px;
+    /* Slightly wider to match proportions */
+    aspect-ratio: 63/88;
+    max-height: 85vh;
+    background: var(--mtg-black);
+    border-radius: 18px;
+    /* Outer black corner radius */
+    padding: 12px;
+    /* Black border thickness */
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     position: absolute;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-.card-image-container {
-    width: 100%;
+.mtg-frame {
     flex: 1;
-    /* Take remaining space */
-    min-height: 0;
-    /* Allow shrinking */
+    /* Artifact Silver Gradient */
+    background: linear-gradient(135deg,
+            #a9a9a9 0%,
+            #dcdcdc 20%,
+            #e8e8e8 50%,
+            #dcdcdc 80%,
+            #a9a9a9 100%);
+    border-radius: 6px;
+    padding: 3px;
+    /* Pinline thickness */
+    display: flex;
+    flex-direction: column;
     position: relative;
-    background-color: #f0f0f0;
-    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-image {
+/* Inner Pinline Border */
+.mtg-inner-border {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    /* Subtle highlight */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 6px 8px 6px;
+    /* Internal spacing */
+    gap: 4px;
+}
+
+/* Title Bar */
+.mtg-title-bar {
+    height: 34px;
+    background: linear-gradient(to bottom, #dcdcdc, #b0b0b0);
+    border: 1px solid #888;
+    border-radius: 4px 4px 2px 2px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.6),
+        1px 1px 2px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.mtg-title {
+    font-family: 'Merriweather', serif;
+    /* Classic MTG title font is closer to Matrix/Plantin but Merriweather works */
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mtg-mana-cost {
+    width: 24px;
+    height: 24px;
+    background: #dcdcdc;
+    border-radius: 50%;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Art Box */
+.mtg-art-container {
+    width: 100%;
+    aspect-ratio: 1.35;
+    /* Typical art ratio */
+    background: #000;
+    border: 2px solid #666;
+    /* Dark grey border around art */
+    margin: 2px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.mtg-art {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-content {
-    padding: 16px;
+/* Type Line */
+.mtg-type-line {
+    height: 30px;
+    background: linear-gradient(to bottom, #dcdcdc, #b0b0b0);
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.6),
+        1px 1px 2px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.mtg-type-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #000;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mtg-set-icon {
+    margin-left: auto;
+    /* Placeholder for set icon */
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #d4af37, #000);
+    /* Gold/Black gradient */
+    border-radius: 2px;
+}
+
+/* Text Box */
+.mtg-text-box {
     flex: 1;
+    background: #d8d8d8;
+    /* Light grey artifact text box */
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    /* Subtle texture */
+    border: 1px solid #888;
+    margin-top: 2px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.word-english {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.word-ipa {
+    align-items: flex-start;
+    font-family: 'Merriweather', serif;
     font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    font-family: monospace;
+    color: #000;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.word-chinese {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-main);
+.mtg-definition {
+    margin-bottom: 12px;
+}
+
+.mtg-flavor-text {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: auto;
+    /* Push to bottom */
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 8px;
+}
+
+/* Bottom Info */
+.mtg-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px 0 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    color: #fff;
+    opacity: 0.8;
 }
 
 /* Action Bar */
@@ -153,22 +281,23 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 0 16px;
-    border-top: 1px solid var(--border-color);
-    background-color: var(--card-bg);
+    border-top: 1px solid #444;
+    background-color: #2a2a2a;
 }
 
 .action-btn {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    border: none;
+    border: 2px solid #555;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #333;
+    color: #fff;
     transition: transform 0.1s, background-color 0.2s;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .action-btn:active {
@@ -176,18 +305,18 @@ body {
 }
 
 .action-btn.unknown {
-    color: var(--danger-color);
-    background-color: #ffebee;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
 }
 
 .action-btn.known {
-    color: var(--success-color);
-    background-color: #e8f5e9;
+    color: #51cf66;
+    border-color: #51cf66;
 }
 
 .action-btn.speak {
-    color: var(--primary-color);
-    background-color: #e3f2fd;
+    color: #4dabf7;
+    border-color: #4dabf7;
     width: 48px;
     height: 48px;
 }
@@ -199,12 +328,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 100;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* Bottom sheet style on mobile */
+    align-items: center;
 }
 
 .modal.hidden {
@@ -212,25 +340,13 @@ body {
 }
 
 .modal-content {
-    background-color: var(--card-bg);
-    width: 100%;
-    max-width: 480px;
-    height: 80%;
-    border-radius: 16px 16px 0 0;
+    background-color: #2a2a2a;
+    color: #fff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    animation: slideUp 0.3s ease-out;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
+    border: 1px solid #444;
 }
 
 .modal-header {
@@ -240,84 +356,41 @@ body {
     margin-bottom: 20px;
 }
 
-.modal-body {
-    flex: 1;
-    overflow-y: auto;
-}
-
-.stats-summary {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.stat-box {
-    flex: 1;
-    background-color: #f8f8f8;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
+.close-modal {
+    background: none;
+    border: none;
+    color: #fff;
     font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.stat-label {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    cursor: pointer;
 }
 
 .word-list {
     list-style: none;
+    margin-top: 10px;
 }
 
 .word-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
     display: flex;
     justify-content: space-between;
 }
 
-.setting-item {
-    margin-bottom: 24px;
-}
-
-.setting-item label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.danger-btn {
-    background-color: var(--danger-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    width: 100%;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-/* Loading State */
+/* Loading */
 .loading-state {
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: var(--text-secondary);
 }
 
 .spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid var(--primary-color);
+    border: 3px solid #444;
+    border-top: 3px solid #dcdcdc;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-bottom: 16px;
@@ -330,18 +403,5 @@ body {
 
     100% {
         transform: rotate(360deg);
-    }
-}
-
-/* Responsive tweaks */
-@media (min-width: 481px) {
-    .modal {
-        align-items: center;
-    }
-
-    .modal-content {
-        height: auto;
-        max-height: 80vh;
-        border-radius: 16px;
     }
 }

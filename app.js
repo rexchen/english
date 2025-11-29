@@ -69,21 +69,44 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!word) return;
 
         const data = dictionary[word] || { zh: '...', ipa: '' };
-        // Use a placeholder image service. 
-        // Pollinations or Unsplash source. 
-        // Using pollinations for more specific generation or loremflickr
-        const imageUrl = `https://image.pollinations.ai/prompt/${word}%20illustration%20minimalist%20vector%20art?width=400&height=400&nologo=true`;
-        // Alternative: `https://loremflickr.com/400/400/${word}`
+        const imageUrl = `https://image.pollinations.ai/prompt/${word}%20fantasy%20art%20illustration%20magic%20the%20gathering%20style?width=400&height=300&nologo=true`;
 
         const cardHtml = `
             <div class="card" id="current-card">
-                <div class="card-image-container">
-                    <img src="${imageUrl}" alt="${word}" class="card-image" onerror="this.src='https://placehold.co/400x400?text=${word}'">
+                <div class="mtg-frame">
+                    <div class="mtg-inner-border">
+                        <!-- Title Bar -->
+                        <div class="mtg-title-bar">
+                            <span class="mtg-title">${word}</span>
+                            <div class="mtg-mana-cost" onclick="document.getElementById('speak-btn').click()">
+                                <span class="material-icons-round" style="font-size: 16px; color: #333;">volume_up</span>
+                            </div>
+                        </div>
+
+                        <!-- Art -->
+                        <div class="mtg-art-container">
+                            <img src="${imageUrl}" alt="${word}" class="mtg-art" onerror="this.src='https://placehold.co/400x300?text=${word}'">
+                        </div>
+
+                        <!-- Type Line -->
+                        <div class="mtg-type-line">
+                            <span class="mtg-type-text">Artifact • ${data.ipa || '/.../'}</span>
+                            <div class="mtg-set-icon"></div>
+                        </div>
+
+                        <!-- Text Box -->
+                        <div class="mtg-text-box">
+                            <p class="mtg-definition">${data.zh}</p>
+                            <div class="mtg-flavor-text">
+                                "The meaning of this word is ancient and powerful."
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h2 class="word-english">${word}</h2>
-                    <p class="word-ipa">${data.ipa || ''}</p>
-                    <p class="word-chinese">${data.zh}</p>
+                <!-- Bottom Info (Outside Frame) -->
+                <div class="mtg-bottom-info">
+                    <span>001/100 R</span>
+                    <span>™ & © 2025 VocabGram</span>
                 </div>
             </div>
         `;
@@ -94,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeWords.length > 1) {
             const nextWord = activeWords[1];
             const nextImg = new Image();
-            nextImg.src = `https://image.pollinations.ai/prompt/${nextWord}%20illustration%20minimalist%20vector%20art?width=400&height=400&nologo=true`;
+            nextImg.src = `https://image.pollinations.ai/prompt/${nextWord}%20fantasy%20art%20illustration%20magic%20the%20gathering%20style?width=400&height=300&nologo=true`;
         }
     }
 
