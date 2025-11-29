@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VocabGram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">VocabGram</div>
+            <div class="header-actions">
+                <button id="stats-btn" class="icon-btn" aria-label="Statistics">
+                    <span class="material-icons-round">bar_chart</span>
+                </button>
+                <button id="settings-btn" class="icon-btn" aria-label="Settings">
+                    <span class="material-icons-round">settings</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content (Card Stack) -->
+        <main class="card-container" id="card-container">
+            <!-- Cards will be injected here -->
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading words...</p>
+            </div>
+        </main>
+
+        <!-- Action Bar (Bottom) -->
+        <div class="action-bar">
+            <button id="unknown-btn" class="action-btn unknown" aria-label="Mark as Unknown">
+                <span class="material-icons-round">close</span>
+            </button>
+            <button id="speak-btn" class="action-btn speak" aria-label="Pronounce">
+                <span class="material-icons-round">volume_up</span>
+            </button>
+            <button id="known-btn" class="action-btn known" aria-label="Mark as Known">
+                <span class="material-icons-round">check</span>
+            </button>
+        </div>
+
+        <!-- Modals -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <button class="close-modal"><span class="material-icons-round">close</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-item">
+                        <label for="json-upload">Import Custom JSON</label>
+                        <input type="file" id="json-upload" accept=".json">
+                    </div>
+                    <div class="setting-item">
+                        <button id="reset-progress" class="danger-btn">Reset Progress</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stats-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Progress</h2>
+                    <button class="close-modal"><span class="material-icons-round">close</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="stats-summary">
+                        <div class="stat-box">
+                            <span id="known-count" class="stat-number">0</span>
+                            <span class="stat-label">Known</span>
+                        </div>
+                        <div class="stat-box">
+                            <span id="unknown-count" class="stat-number">0</span>
+                            <span class="stat-label">Learning</span>
+                        </div>
+                    </div>
+                    <h3>Words to Review</h3>
+                    <ul id="unknown-list" class="word-list">
+                        <!-- List items injected here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

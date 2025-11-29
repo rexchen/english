@@ -1,0 +1,402 @@
+{
+    "ace": {
+        "zh": "王牌",
+        "ipa": "/eɪs/"
+    },
+    "actor": {
+        "zh": "演員",
+        "ipa": "/ˈæktər/"
+    },
+    "almond": {
+        "zh": "杏仁",
+        "ipa": "/ˈɑːmənd/"
+    },
+    "alphabet": {
+        "zh": "字母表",
+        "ipa": "/ˈælfəbet/"
+    },
+    "amount": {
+        "zh": "數量",
+        "ipa": "/əˈmaʊnt/"
+    },
+    "arrow": {
+        "zh": "箭",
+        "ipa": "/ˈærəʊ/"
+    },
+    "article": {
+        "zh": "文章",
+        "ipa": "/ˈɑːrtɪkl/"
+    },
+    "badger": {
+        "zh": "獾",
+        "ipa": "/ˈbædʒər/"
+    },
+    "barber": {
+        "zh": "理髮師",
+        "ipa": "/ˈbɑːrbər/"
+    },
+    "basic": {
+        "zh": "基本的",
+        "ipa": "/ˈbeɪsɪk/"
+    },
+    "battle": {
+        "zh": "戰鬥",
+        "ipa": "/ˈbætl/"
+    },
+    "beginner": {
+        "zh": "初學者",
+        "ipa": "/bɪˈɡɪnər/"
+    },
+    "bind": {
+        "zh": "捆綁",
+        "ipa": "/baɪnd/"
+    },
+    "borrow": {
+        "zh": "借入",
+        "ipa": "/ˈbɔːrəʊ/"
+    },
+    "bother": {
+        "zh": "打擾",
+        "ipa": "/ˈbɑːðər/"
+    },
+    "cactus": {
+        "zh": "仙人掌",
+        "ipa": "/ˈkæktəs/"
+    },
+    "cartoon": {
+        "zh": "卡通",
+        "ipa": "/kɑːrˈtuːn/"
+    },
+    "center": {
+        "zh": "中心",
+        "ipa": "/ˈsentər/"
+    },
+    "checkers": {
+        "zh": "跳棋",
+        "ipa": "/ˈtʃekərz/"
+    },
+    "chimney": {
+        "zh": "煙囪",
+        "ipa": "/ˈtʃɪmni/"
+    },
+    "claim": {
+        "zh": "聲稱",
+        "ipa": "/kleɪm/"
+    },
+    "clerk": {
+        "zh": "店員",
+        "ipa": "/klɜːrk/"
+    },
+    "click": {
+        "zh": "點擊",
+        "ipa": "/klɪk/"
+    },
+    "cliff": {
+        "zh": "懸崖",
+        "ipa": "/klɪf/"
+    },
+    "clue": {
+        "zh": "線索",
+        "ipa": "/kluː/"
+    },
+    "cocoon": {
+        "zh": "繭",
+        "ipa": "/kəˈkuːn/"
+    },
+    "control": {
+        "zh": "控制",
+        "ipa": "/kənˈtroʊl/"
+    },
+    "corner": {
+        "zh": "角落",
+        "ipa": "/ˈkɔːrnər/"
+    },
+    "cue": {
+        "zh": "提示",
+        "ipa": "/kjuː/"
+    },
+    "daydream": {
+        "zh": "白日夢",
+        "ipa": "/ˈdeɪdriːm/"
+    },
+    "disk": {
+        "zh": "磁盤",
+        "ipa": "/dɪsk/"
+    },
+    "drill": {
+        "zh": "鑽孔",
+        "ipa": "/drɪl/"
+    },
+    "dust": {
+        "zh": "灰塵",
+        "ipa": "/dʌst/"
+    },
+    "enemy": {
+        "zh": "敵人",
+        "ipa": "/ˈenəmi/"
+    },
+    "equal": {
+        "zh": "平等的",
+        "ipa": "/ˈiːkwəl/"
+    },
+    "erase": {
+        "zh": "擦除",
+        "ipa": "/ɪˈreɪs/"
+    },
+    "example": {
+        "zh": "例子",
+        "ipa": "/ɪɡˈzæmpl/"
+    },
+    "field": {
+        "zh": "田野",
+        "ipa": "/fiːld/"
+    },
+    "firefly": {
+        "zh": "螢火蟲",
+        "ipa": "/ˈfaɪərflaɪ/"
+    },
+    "fireworks": {
+        "zh": "煙火",
+        "ipa": "/ˈfaɪərwɜːrks/"
+    },
+    "firm": {
+        "zh": "公司",
+        "ipa": "/fɜːrm/"
+    },
+    "flash": {
+        "zh": "閃光",
+        "ipa": "/flæʃ/"
+    },
+    "flight": {
+        "zh": "飛行",
+        "ipa": "/flaɪt/"
+    },
+    "fresh": {
+        "zh": "新鮮的",
+        "ipa": "/freʃ/"
+    },
+    "giant": {
+        "zh": "巨人",
+        "ipa": "/ˈdʒaɪənt/"
+    },
+    "grand": {
+        "zh": "宏偉的",
+        "ipa": "/ɡrænd/"
+    },
+    "harbor": {
+        "zh": "港口",
+        "ipa": "/ˈhɑːrbər/"
+    },
+    "haunt": {
+        "zh": "出沒",
+        "ipa": "/hɔːnt/"
+    },
+    "history": {
+        "zh": "歷史",
+        "ipa": "/ˈhɪstri/"
+    },
+    "hungry": {
+        "zh": "飢餓的",
+        "ipa": "/ˈhʌŋɡri/"
+    },
+    "iron": {
+        "zh": "鐵",
+        "ipa": "/ˈaɪərn/"
+    },
+    "island": {
+        "zh": "島嶼",
+        "ipa": "/ˈaɪlənd/"
+    },
+    "jellyfish": {
+        "zh": "水母",
+        "ipa": "/ˈdʒelifɪʃ/"
+    },
+    "knight": {
+        "zh": "騎士",
+        "ipa": "/naɪt/"
+    },
+    "know-how": {
+        "zh": "技能",
+        "ipa": "/ˈnoʊ haʊ/"
+    },
+    "ladybird": {
+        "zh": "瓢蟲",
+        "ipa": "/ˈleɪdibɜːrd/"
+    },
+    "lighthouse": {
+        "zh": "燈塔",
+        "ipa": "/ˈlaɪthaʊs/"
+    },
+    "lonely": {
+        "zh": "寂寞的",
+        "ipa": "/ˈloʊnli/"
+    },
+    "maple": {
+        "zh": "楓樹",
+        "ipa": "/ˈmeɪpl/"
+    },
+    "meter": {
+        "zh": "米",
+        "ipa": "/ˈmiːtər/"
+    },
+    "middle": {
+        "zh": "中間",
+        "ipa": "/ˈmɪdl/"
+    },
+    "mole": {
+        "zh": "鼴鼠",
+        "ipa": "/moʊl/"
+    },
+    "narrow": {
+        "zh": "狹窄的",
+        "ipa": "/ˈnæroʊ/"
+    },
+    "offer": {
+        "zh": "提供",
+        "ipa": "/ˈɔːfər/"
+    },
+    "onion": {
+        "zh": "洋蔥",
+        "ipa": "/ˈʌnjən/"
+    },
+    "period": {
+        "zh": "時期",
+        "ipa": "/ˈpɪriəd/"
+    },
+    "plain": {
+        "zh": "平原",
+        "ipa": "/pleɪn/"
+    },
+    "powerful": {
+        "zh": "強大的",
+        "ipa": "/ˈpaʊərfəl/"
+    },
+    "pretend": {
+        "zh": "假裝",
+        "ipa": "/prɪˈtend/"
+    },
+    "pride": {
+        "zh": "驕傲",
+        "ipa": "/praɪd/"
+    },
+    "recess": {
+        "zh": "休息",
+        "ipa": "/ˈriːses/"
+    },
+    "record": {
+        "zh": "記錄",
+        "ipa": "/ˈrekərd/"
+    },
+    "result": {
+        "zh": "結果",
+        "ipa": "/rɪˈzʌlt/"
+    },
+    "rude": {
+        "zh": "粗魯的",
+        "ipa": "/ruːd/"
+    },
+    "season": {
+        "zh": "季節",
+        "ipa": "/ˈsiːzn/"
+    },
+    "settle": {
+        "zh": "定居",
+        "ipa": "/ˈsetl/"
+    },
+    "share": {
+        "zh": "分享",
+        "ipa": "/ʃer/"
+    },
+    "speech": {
+        "zh": "演講",
+        "ipa": "/spiːtʃ/"
+    },
+    "steak": {
+        "zh": "牛排",
+        "ipa": "/steɪk/"
+    },
+    "steel": {
+        "zh": "鋼鐵",
+        "ipa": "/stiːl/"
+    },
+    "Stone Age": {
+        "zh": "石器時代",
+        "ipa": "/ˈstoʊn eɪdʒ/"
+    },
+    "strawberry": {
+        "zh": "草莓",
+        "ipa": "/ˈstrɔːberi/"
+    },
+    "success": {
+        "zh": "成功",
+        "ipa": "/səkˈses/"
+    },
+    "sundown": {
+        "zh": "日落",
+        "ipa": "/ˈsʌndaʊn/"
+    },
+    "sunlit": {
+        "zh": "陽光照射的",
+        "ipa": "/ˈsʌnlɪt/"
+    },
+    "sunrise": {
+        "zh": "日出",
+        "ipa": "/ˈsʌnraɪz/"
+    },
+    "supper": {
+        "zh": "晚餐",
+        "ipa": "/ˈsʌpər/"
+    },
+    "telephone": {
+        "zh": "電話",
+        "ipa": "/ˈtelɪfoʊn/"
+    },
+    "thirsty": {
+        "zh": "口渴的",
+        "ipa": "/ˈθɜːrsti/"
+    },
+    "thread": {
+        "zh": "線",
+        "ipa": "/θred/"
+    },
+    "toilet": {
+        "zh": "廁所",
+        "ipa": "/ˈtɔɪlət/"
+    },
+    "total": {
+        "zh": "總計",
+        "ipa": "/ˈtoʊtl/"
+    },
+    "trash": {
+        "zh": "垃圾",
+        "ipa": "/træʃ/"
+    },
+    "value": {
+        "zh": "價值",
+        "ipa": "/ˈvæljuː/"
+    },
+    "vote": {
+        "zh": "投票",
+        "ipa": "/voʊt/"
+    },
+    "wasp": {
+        "zh": "黃蜂",
+        "ipa": "/wɑːsp/"
+    },
+    "wildcat": {
+        "zh": "野貓",
+        "ipa": "/ˈwaɪldkæt/"
+    },
+    "willow": {
+        "zh": "柳樹",
+        "ipa": "/ˈwɪloʊ/"
+    },
+    "yourself": {
+        "zh": "你自己",
+        "ipa": "/jɔːrˈself/"
+    },
+    "youth": {
+        "zh": "青年",
+        "ipa": "/juːθ/"
+    }
+}
