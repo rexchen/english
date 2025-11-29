@@ -1,0 +1,302 @@
+{
+    "act": {
+        "zh": "行動",
+        "ipa": "/ækt/",
+        "en": "Take action; do something."
+    },
+    "add": {
+        "zh": "增加",
+        "ipa": "/æd/",
+        "en": "Join (something) to something else so as to increase the size, number, or amount."
+    },
+    "air": {
+        "zh": "空氣",
+        "ipa": "/er/",
+        "en": "The invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and nitrogen."
+    },
+    "any": {
+        "zh": "任何",
+        "ipa": "/ˈeni/",
+        "en": "Used to refer to one or some of a thing or number of things, no matter how much or many."
+    },
+    "ape": {
+        "zh": "猿",
+        "ipa": "/eɪp/",
+        "en": "A large primate that lacks a tail, including the gorilla, chimpanzees, orangutan, and gibbons."
+    },
+    "away": {
+        "zh": "離開",
+        "ipa": "/əˈweɪ/",
+        "en": "To or at a distance from a particular place, person, or thing."
+    },
+    "barn": {
+        "zh": "穀倉",
+        "ipa": "/bɑːrn/",
+        "en": "A large farm building used for storing grain, hay, or straw or for housing livestock."
+    },
+    "bay": {
+        "zh": "海灣",
+        "ipa": "/beɪ/",
+        "en": "A broad inlet of the sea where the land curves inward."
+    },
+    "bunny": {
+        "zh": "小兔子",
+        "ipa": "/ˈbʌni/",
+        "en": "A child's term for a rabbit."
+    },
+    "cab": {
+        "zh": "計程車",
+        "ipa": "/kæb/",
+        "en": "A taxi."
+    },
+    "calf": {
+        "zh": "小牛",
+        "ipa": "/kæf/",
+        "en": "A young bovine animal, especially a domestic cow or bull."
+    },
+    "candy": {
+        "zh": "糖果",
+        "ipa": "/ˈkændi/",
+        "en": "A sweet food made with sugar or syrup combined with fruit, chocolate, or nuts."
+    },
+    "care": {
+        "zh": "關心",
+        "ipa": "/ker/",
+        "en": "The provision of what is necessary for the health, welfare, maintenance, and protection of someone or something."
+    },
+    "child": {
+        "zh": "孩子",
+        "ipa": "/tʃaɪld/",
+        "en": "A young human being below the age of puberty or below the legal age of majority."
+    },
+    "city": {
+        "zh": "城市",
+        "ipa": "/ˈsɪti/",
+        "en": "A large town."
+    },
+    "cold": {
+        "zh": "寒冷的",
+        "ipa": "/koʊld/",
+        "en": "Of or at a low or relatively low temperature, especially when compared with the human body."
+    },
+    "color": {
+        "zh": "顏色",
+        "ipa": "/ˈkʌlər/",
+        "en": "The property possessed by an object of producing different sensations on the eye as a result of the way it reflects or emits light."
+    },
+    "cookie": {
+        "zh": "餅乾",
+        "ipa": "/ˈkʊki/",
+        "en": "A sweet biscuit having a fairly soft, chewy texture and typically containing pieces of chocolate or fruit."
+    },
+    "cow": {
+        "zh": "母牛",
+        "ipa": "/kaʊ/",
+        "en": "A fully grown female animal of a domesticated breed of ox, kept to produce milk or beef."
+    },
+    "cub": {
+        "zh": "幼獸",
+        "ipa": "/kʌb/",
+        "en": "The young of a fox, bear, lion, or other carnivorous mammal."
+    },
+    "day": {
+        "zh": "白天",
+        "ipa": "/deɪ/",
+        "en": "A period of twenty-four hours as a unit of time."
+    },
+    "dot": {
+        "zh": "點",
+        "ipa": "/dɑːt/",
+        "en": "A small round mark or spot."
+    },
+    "dove": {
+        "zh": "鴿子",
+        "ipa": "/dʌv/",
+        "en": "A stocky seed- or fruit-eating bird with a small head, short legs, and a cooing voice."
+    },
+    "easy": {
+        "zh": "容易的",
+        "ipa": "/ˈiːzi/",
+        "en": "Achieved without great effort; presenting few difficulties."
+    },
+    "elf": {
+        "zh": "精靈",
+        "ipa": "/elf/",
+        "en": "A supernatural creature of folk tales, typically represented as a small, elusive figure in human form with pointed ears, magical powers, and a capricious nature."
+    },
+    "fall": {
+        "zh": "跌倒",
+        "ipa": "/fɔːl/",
+        "en": "Move downward, typically rapidly and freely without control, from a higher to a lower level."
+    },
+    "fly": {
+        "zh": "飛",
+        "ipa": "/flaɪ/",
+        "en": "(of a bird, bat, or insect) move through the air using wings."
+    },
+    "fun": {
+        "zh": "樂趣",
+        "ipa": "/fʌn/",
+        "en": "Enjoyment, amusement, or lighthearted pleasure."
+    },
+    "gum": {
+        "zh": "口香糖",
+        "ipa": "/ɡʌm/",
+        "en": "A viscous secretion of some trees and shrubs that hardens on drying but is soluble in water, and from which adhesives and other products are made."
+    },
+    "gun": {
+        "zh": "槍",
+        "ipa": "/ɡʌn/",
+        "en": "A weapon incorporating a metal tube from which bullets, shells, or other missiles are propelled by explosive force."
+    },
+    "hay": {
+        "zh": "乾草",
+        "ipa": "/heɪ/",
+        "en": "Grass that has been mown and dried for use as fodder."
+    },
+    "help": {
+        "zh": "幫助",
+        "ipa": "/help/",
+        "en": "Make it easier for (someone) to do something by offering one's services or resources."
+    },
+    "here": {
+        "zh": "這裡",
+        "ipa": "/hɪr/",
+        "en": "In, at, or to this place or position."
+    },
+    "hill": {
+        "zh": "小山",
+        "ipa": "/hɪl/",
+        "en": "A naturally raised area of land, not as high or craggy as a mountain."
+    },
+    "hop": {
+        "zh": "單腳跳",
+        "ipa": "/hɑːp/",
+        "en": "(of a person) move by jumping on one foot."
+    },
+    "lap": {
+        "zh": "膝蓋",
+        "ipa": "/læp/",
+        "en": "The flat area between the waist and knees of a seated person."
+    },
+    "late": {
+        "zh": "遲到的",
+        "ipa": "/leɪt/",
+        "en": "Doing something or taking place after the expected, proper, or usual time."
+    },
+    "like": {
+        "zh": "喜歡",
+        "ipa": "/laɪk/",
+        "en": "Find agreeable, enjoyable, or satisfactory."
+    },
+    "line": {
+        "zh": "線",
+        "ipa": "/laɪn/",
+        "en": "A long, narrow mark or band."
+    },
+    "look": {
+        "zh": "看",
+        "ipa": "/lʊk/",
+        "en": "Direct one's gaze toward someone or something or in a specified direction."
+    },
+    "love": {
+        "zh": "愛",
+        "ipa": "/lʌv/",
+        "en": "An intense feeling of deep affection."
+    },
+    "low": {
+        "zh": "低的",
+        "ipa": "/loʊ/",
+        "en": "Of less than average height from top to bottom or to the top from the ground."
+    },
+    "more": {
+        "zh": "更多的",
+        "ipa": "/mɔːr/",
+        "en": "A greater or additional amount or degree."
+    },
+    "move": {
+        "zh": "移動",
+        "ipa": "/muːv/",
+        "en": "Go in a specified direction or manner; change position."
+    },
+    "nap": {
+        "zh": "小睡",
+        "ipa": "/næp/",
+        "en": "Sleep lightly or briefly, especially during the day."
+    },
+    "open": {
+        "zh": "打開",
+        "ipa": "/ˈoʊpən/",
+        "en": "Allow access, passage, or a view through an empty space; not closed or blocked."
+    },
+    "pass": {
+        "zh": "通過",
+        "ipa": "/pæs/",
+        "en": "Move or cause to move in a specified direction."
+    },
+    "pizza": {
+        "zh": "披薩",
+        "ipa": "/ˈpiːtsə/",
+        "en": "A dish of Italian origin consisting of a flat, round base of dough baked with a topping of tomato sauce and cheese, typically with added meat or vegetables."
+    },
+    "pony": {
+        "zh": "小馬",
+        "ipa": "/ˈpoʊni/",
+        "en": "A horse of a small breed, especially one whose height at the withers is below 14 hands 2 inches."
+    },
+    "pop": {
+        "zh": "砰的一聲",
+        "ipa": "/pɑːp/",
+        "en": "Make a light explosive sound."
+    },
+    "puppy": {
+        "zh": "小狗",
+        "ipa": "/ˈpʌpi/",
+        "en": "A young dog."
+    },
+    "rabbit": {
+        "zh": "兔子",
+        "ipa": "/ˈræbɪt/",
+        "en": "A burrowing, gregarious, plant-eating mammal with long ears, long hind legs, and a short tail."
+    },
+    "rich": {
+        "zh": "富有的",
+        "ipa": "/rɪtʃ/",
+        "en": "Having a great deal of money or assets; wealthy."
+    },
+    "robot": {
+        "zh": "機器人",
+        "ipa": "/ˈroʊbɑːt/",
+        "en": "A machine capable of carrying out a complex series of actions automatically, especially one programmable by a computer."
+    },
+    "safe": {
+        "zh": "安全的",
+        "ipa": "/seɪf/",
+        "en": "Protected from or not exposed to danger or risk; not likely to be harmed or lost."
+    },
+    "shy": {
+        "zh": "害羞的",
+        "ipa": "/ʃaɪ/",
+        "en": "Being reserved or having or showing nervousness or timidity in the company of other people."
+    },
+    "sick": {
+        "zh": "生病的",
+        "ipa": "/sɪk/",
+        "en": "Affected by physical or mental illness."
+    },
+    "stop": {
+        "zh": "停止",
+        "ipa": "/stɑːp/",
+        "en": "(of an event, action, or process) come to an end; cease to happen."
+    },
+    "wax": {
+        "zh": "蠟",
+        "ipa": "/wæks/",
+        "en": "A sticky yellowish moldable substance secreted by honeybees as the material of honeycomb; beeswax."
+    },
+    "zipper": {
+        "zh": "拉鍊",
+        "ipa": "/ˈzɪpər/",
+        "en": "A device for fastening clothing or bags, consisting of two rows of metal or plastic teeth that are interlocked by a sliding tab."
+    }
+}

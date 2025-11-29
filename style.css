@@ -407,3 +407,42 @@ body {
         transform: rotate(360deg);
     }
 }
+
+/* Level Selection */
+.level-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px 0;
+}
+
+.level-btn {
+    background: linear-gradient(135deg, #dcdcdc 0%, #b0b0b0 100%);
+    border: 2px solid #888;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.level-btn:active {
+    transform: scale(0.98);
+}
+
+.level-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.level-desc {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    color: #333;
+}

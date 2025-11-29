@@ -64,7 +64,30 @@
                         <input type="file" id="json-upload" accept=".json">
                     </div>
                     <div class="setting-item">
+                        <button id="change-level-btn" class="level-btn" style="width: 100%;">Change Level</button>
+                    </div>
+                    <div class="setting-item">
                         <button id="reset-progress" class="danger-btn">Reset Progress</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="level-selection-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Select Difficulty</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="level-options">
+                        <button class="level-btn" data-level="level1">
+                            <span class="level-title">Level 1</span>
+                            <span class="level-desc">Beginner (60 Words)</span>
+                        </button>
+                        <button class="level-btn" data-level="level2">
+                            <span class="level-title">Level 2</span>
+                            <span class="level-desc">Advanced (Original)</span>
+                        </button>
                     </div>
                 </div>
             </div>

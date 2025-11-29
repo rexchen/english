@@ -1,364 +1,289 @@
-import defaultWords from './word.json';
-import defaultDictionary from './dictionary.json';
+// Import level data
+import level1Data from './level1.json';
+import level2Data from './level2.json';
 
+// App state
+let currentLevel = null;
+let dictionary = {};
+let activeWords = [];
+let currentIndex = 0;
+let knownWords = [];
+let unknownWords = [];
+
+// DOM Elements
+const cardContainer = document.getElementById('card-container');
+const knownBtn = document.getElementById('known-btn');
+const unknownBtn = document.getElementById('unknown-btn');
+const speakBtn = document.getElementById('speak-btn');
+const statsBtn = document.getElementById('stats-btn');
+const settingsBtn = document.getElementById('settings-btn');
+const levelSelectionModal = document.getElementById('level-selection-modal');
+const statsModal = document.getElementById('stats-modal');
+const settingsModal = document.getElementById('settings-modal');
+
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    // State
-    let words = [];
-    let dictionary = defaultDictionary;
-    let knownWords = JSON.parse(localStorage.getItem('vocab_known')) || [];
-    let unknownWords = JSON.parse(localStorage.getItem('vocab_unknown')) || [];
-    let currentWordIndex = 0;
-    let activeWords = []; // Words that are not known yet
+    showLevelSelection();
+    setupEventListeners();
+});
 
-    // DOM Elements
-    const cardContainer = document.getElementById('card-container');
-    const unknownBtn = document.getElementById('unknown-btn');
-    const knownBtn = document.getElementById('known-btn');
-    const speakBtn = document.getElementById('speak-btn');
-    const statsBtn = document.getElementById('stats-btn');
-    const settingsBtn = document.getElementById('settings-btn');
-    const statsModal = document.getElementById('stats-modal');
-    const settingsModal = document.getElementById('settings-modal');
-    const closeButtons = document.querySelectorAll('.close-modal');
-    const jsonUpload = document.getElementById('json-upload');
-    const resetBtn = document.getElementById('reset-progress');
-    const knownCountEl = document.getElementById('known-count');
-    const unknownCountEl = document.getElementById('unknown-count');
-    const unknownListEl = document.getElementById('unknown-list');
+function showLevelSelection() {
+    levelSelectionModal.classList.remove('hidden');
+}
 
-    // Initialization
-    init();
-
-    async function init() {
-        try {
-            // Load Words
-            await loadWords();
-
-            updateStats();
-        } catch (error) {
-            console.error('Initialization failed:', error);
-            cardContainer.innerHTML = '<p>Error loading data. Please refresh.</p>';
-        }
-    }
-
-    async function loadWords(customList = null) {
-        if (customList) {
-            words = customList;
-        } else {
-            words = defaultWords;
-        }
-
-        // Filter out known words to create the active learning list
-        // We also want to include unknown words that need review
-        // Strategy: Active list = (All Words - Known Words)
-        // We can prioritize Unknown words if we want, but for now let's just filter
-
-        activeWords = words.filter(word => !knownWords.includes(word));
-
-        // Shuffle active words slightly or keep order? Let's keep order for now but maybe shuffle later
-        // For now, simple filter
-
-        if (activeWords.length > 0) {
-            renderCard(activeWords[0]);
-        } else {
-            showCompletionState();
-        }
-    }
-
-    function renderCard(word) {
-        if (!word) return;
-
-        const data = dictionary[word] || { zh: '...', ipa: '', en: '' };
-        // Use English definition in prompt for better accuracy
-        const prompt = `${word} ${data.en} fantasy art illustration magic the gathering style`;
-        const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=400&height=300&nologo=true`;
-
-        const cardHtml = `
-            <div class="card" id="current-card">
-                <div class="mtg-frame">
-                    <div class="mtg-inner-border">
-                        <!-- Title Bar -->
-                        <div class="mtg-title-bar">
-                            <span class="mtg-title">${word}</span>
-                            <div class="mtg-mana-cost" onclick="document.getElementById('speak-btn').click()">
-                                <span class="material-icons-round" style="font-size: 16px; color: #333;">volume_up</span>
-                            </div>
-                        </div>
-
-                        <!-- Art -->
-                        <div class="mtg-art-container">
-                            <img src="${imageUrl}" alt="${word}" class="mtg-art" onerror="this.src='https://placehold.co/400x300?text=${word}'">
-                        </div>
-
-                        <!-- Type Line -->
-                        <div class="mtg-type-line">
-                            <span class="mtg-type-text">Artifact • ${data.ipa || '/.../'}</span>
-                            <div class="mtg-set-icon"></div>
-                        </div>
-
-                        <!-- Text Box -->
-                        <div class="mtg-text-box">
-                            <p class="mtg-definition">${data.zh}</p>
-                            <div class="mtg-flavor-text">
-                                "${data.en || 'The meaning of this word is ancient and powerful.'}"
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Bottom Info (Outside Frame) -->
-                <div class="mtg-bottom-info">
-                    <span>001/100 R</span>
-                    <span>™ & © 2025 VocabGram</span>
-                </div>
-            </div>
-        `;
-
-        cardContainer.innerHTML = cardHtml;
-
-        // Preload next image
-        if (activeWords.length > 1) {
-            const nextWord = activeWords[1];
-            const nextData = dictionary[nextWord] || { en: '' };
-            const nextPrompt = `${nextWord} ${nextData.en} fantasy art illustration magic the gathering style`;
-            const nextImg = new Image();
-            nextImg.src = `https://image.pollinations.ai/prompt/${encodeURIComponent(nextPrompt)}?width=400&height=300&nologo=true`;
-        }
-    }
-
-    function handleDecision(type) {
-        const currentWord = activeWords[0];
-        if (!currentWord) return;
-
-        const card = document.getElementById('current-card');
-
-        // Animation
-        const translateX = type === 'known' ? 100 : -100;
-        const rotate = type === 'known' ? 20 : -20;
-
-        card.style.transform = `translate(${translateX}%, -20px) rotate(${rotate}deg)`;
-        card.style.opacity = '0';
-
-        setTimeout(() => {
-            if (type === 'known') {
-                if (!knownWords.includes(currentWord)) {
-                    knownWords.push(currentWord);
-                    // Remove from unknown if it was there
-                    unknownWords = unknownWords.filter(w => w !== currentWord);
-                }
-            } else {
-                if (!unknownWords.includes(currentWord)) {
-                    unknownWords.push(currentWord);
-                }
-                // Move to end of active list to review again later in session?
-                // Or just keep in unknown list. 
-                // For this simple app, let's just move to next word.
-            }
-
-            saveProgress();
-            activeWords.shift(); // Remove current word
-
-            if (type === 'unknown') {
-                // If unknown, maybe add it back to the end of the queue for this session?
-                // activeWords.push(currentWord); 
-                // Let's not do infinite loop for now, just mark as unknown list
-            }
-
-            if (activeWords.length > 0) {
-                renderCard(activeWords[0]);
-            } else {
-                showCompletionState();
-            }
-
-            updateStats();
-        }, 300);
-    }
-
-    function showCompletionState() {
-        const hasUnknown = unknownWords.length > 0;
-        const message = hasUnknown
-            ? `You have ${unknownWords.length} words to review.`
-            : "You've mastered all the words!";
-
-        const actionButton = hasUnknown
-            ? `<button id="review-btn" class="action-btn" style="width: auto; padding: 0 24px; border-radius: 24px; background: var(--primary-color); color: white; font-weight: 600;">
-                 Review ${unknownWords.length} Words
-               </button>`
-            : `<button id="reset-all-btn" class="action-btn" style="width: auto; padding: 0 24px; border-radius: 24px; background: var(--text-main); color: white; font-weight: 600;">
-                 Start Over
-               </button>`;
-
-        cardContainer.innerHTML = `
-            <div class="card-content">
-                <h2>All Caught Up! 🎉</h2>
-                <p style="margin-bottom: 24px; color: var(--text-secondary);">${message}</p>
-                ${actionButton}
-            </div>
-        `;
-
-        if (hasUnknown) {
-            document.getElementById('review-btn').addEventListener('click', () => {
-                startReviewSession();
-            });
-        } else {
-            document.getElementById('reset-all-btn').addEventListener('click', () => {
-                if (confirm('Reset all progress and start over?')) {
-                    knownWords = [];
-                    unknownWords = [];
-                    saveProgress();
-                    loadWords();
-                }
-            });
-        }
-    }
-
-    function startReviewSession() {
-        if (unknownWords.length === 0) {
-            alert("No unknown words to review!");
-            return;
-        }
-        activeWords = [...unknownWords];
-        // Shuffle for better practice
-        activeWords.sort(() => Math.random() - 0.5);
-        renderCard(activeWords[0]);
-        statsModal.classList.add('hidden');
-    }
-
-    // Voice selection logic
-    let selectedVoice = null;
-
-    function loadVoices() {
-        const voices = window.speechSynthesis.getVoices();
-        // Priority list for better US voices
-        const preferredVoices = [
-            'Google US English',
-            'Samantha',
-            'Microsoft David',
-            'Alex'
-        ];
-
-        // Try to find a preferred voice
-        for (const name of preferredVoices) {
-            const voice = voices.find(v => v.name.includes(name) && v.lang.startsWith('en'));
-            if (voice) {
-                selectedVoice = voice;
-                break;
-            }
-        }
-
-        // Fallback to any en-US voice
-        if (!selectedVoice) {
-            selectedVoice = voices.find(v => v.lang === 'en-US');
-        }
-    }
-
-    // Handle async voice loading
-    if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = loadVoices;
-    }
-    loadVoices(); // Try loading immediately in case they are ready
-
-    function speakWord() {
-        const currentWord = activeWords[0];
-        if (currentWord) {
-            // Cancel any current speech
-            window.speechSynthesis.cancel();
-
-            const utterance = new SpeechSynthesisUtterance(currentWord);
-            utterance.lang = 'en-US';
-            utterance.rate = 0.9; // Slightly slower for clarity
-
-            if (selectedVoice) {
-                utterance.voice = selectedVoice;
-            }
-
-            window.speechSynthesis.speak(utterance);
-        }
-    }
-
-    function saveProgress() {
-        localStorage.setItem('vocab_known', JSON.stringify(knownWords));
-        localStorage.setItem('vocab_unknown', JSON.stringify(unknownWords));
-    }
-
-    function updateStats() {
-        knownCountEl.textContent = knownWords.length;
-        unknownCountEl.textContent = unknownWords.length;
-
-        const practiceBtnHtml = unknownWords.length > 0
-            ? `<button id="practice-unknown-btn" style="width: 100%; padding: 12px; margin-bottom: 16px; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
-                 Practice ${unknownWords.length} Unknown Words
-               </button>`
-            : '';
-
-        unknownListEl.innerHTML = practiceBtnHtml + unknownWords.map(w => `
-            <li>
-                <span>${w}</span>
-                <span style="color: #888;">${dictionary[w]?.zh || ''}</span>
-            </li>
-        `).join('');
-
-        if (unknownWords.length > 0) {
-            document.getElementById('practice-unknown-btn')?.addEventListener('click', startReviewSession);
-        }
-    }
-
-    // Event Listeners
-    knownBtn.addEventListener('click', () => handleDecision('known'));
-    unknownBtn.addEventListener('click', () => handleDecision('unknown'));
-    speakBtn.addEventListener('click', speakWord);
-
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') handleDecision('known');
-        if (e.key === 'ArrowLeft') handleDecision('unknown');
-        if (e.key === ' ' || e.key === 'ArrowUp') speakWord();
-    });
-
-    // Modals
-    statsBtn.addEventListener('click', () => {
-        updateStats();
-        statsModal.classList.remove('hidden');
-    });
-
-    settingsBtn.addEventListener('click', () => settingsModal.classList.remove('hidden'));
-
-    closeButtons.forEach(btn => {
+function setupEventListeners() {
+    // Level selection
+    document.querySelectorAll('.level-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            statsModal.classList.add('hidden');
-            settingsModal.classList.add('hidden');
+            const level = btn.dataset.level;
+            startGame(level);
+        });
+    });
+
+    // Game buttons
+    knownBtn.addEventListener('click', () => markWord('known'));
+    unknownBtn.addEventListener('click', () => markWord('unknown'));
+    speakBtn.addEventListener('click', () => speakWord(activeWords[currentIndex]));
+
+    // Modal buttons
+    statsBtn.addEventListener('click', () => openStatsModal());
+    settingsBtn.addEventListener('click', () => openModal(settingsModal));
+
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            closeModal(e.target.closest('.modal'));
         });
     });
 
     // Settings
-    resetBtn.addEventListener('click', () => {
-        if (confirm('Are you sure you want to reset all progress?')) {
-            knownWords = [];
-            unknownWords = [];
-            saveProgress();
-            loadWords(); // Reload
-            settingsModal.classList.add('hidden');
-        }
-    });
+    document.getElementById('reset-progress').addEventListener('click', resetProgress);
+    document.getElementById('change-level-btn').addEventListener('click', changeLevel);
 
-    jsonUpload.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                try {
-                    const customWords = JSON.parse(event.target.result);
-                    if (Array.isArray(customWords)) {
-                        loadWords(customWords);
-                        settingsModal.classList.add('hidden');
-                        alert('Custom list loaded!');
-                    } else {
-                        alert('Invalid JSON format. Expected an array of strings.');
-                    }
-                } catch (err) {
-                    alert('Error parsing JSON');
-                }
-            };
-            reader.readAsText(file);
+    // Review Button
+    document.addEventListener('click', (e) => {
+        if (e.target.id === 'review-unknown-btn') {
+            startReview();
         }
     });
-});
+}
+
+function startGame(level) {
+    currentLevel = level;
+
+    // Load dictionary for selected level
+    dictionary = level === 'level1' ? level1Data : level2Data;
+
+    // Load progress for this level
+    knownWords = JSON.parse(localStorage.getItem(`${level}_knownWords`)) || [];
+    unknownWords = JSON.parse(localStorage.getItem(`${level}_unknownWords`)) || [];
+
+    // Generate word list from dictionary keys
+    activeWords = Object.keys(dictionary).filter(word =>
+        !knownWords.includes(word) && !unknownWords.includes(word)
+    );
+
+    currentIndex = 0;
+
+    // Hide level selection modal
+    levelSelectionModal.classList.add('hidden');
+
+    // Start game
+    if (activeWords.length > 0) {
+        renderCard(activeWords[currentIndex]);
+    } else {
+        showCompletionState();
+    }
+}
+
+function saveProgress() {
+    localStorage.setItem(`${currentLevel}_knownWords`, JSON.stringify(knownWords));
+    localStorage.setItem(`${currentLevel}_unknownWords`, JSON.stringify(unknownWords));
+}
+
+function renderCard(word) {
+    if (!word) return;
+
+    const data = dictionary[word] || { zh: '...', ipa: '', en: '' };
+    // Use English definition in prompt for better accuracy
+    const prompt = `${word} ${data.en} fantasy art illustration magic the gathering style`;
+    const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=400&height=300&nologo=true`;
+
+    // Calculate progress
+    const totalWords = Object.keys(dictionary).length;
+    const currentProgress = knownWords.length + unknownWords.length + 1; // +1 for current word being shown
+
+    const cardHtml = `
+        <div class="card" id="current-card">
+            <div class="mtg-frame">
+                <div class="mtg-inner-border">
+                    <!-- Title Bar -->
+                    <div class="mtg-title-bar">
+                        <span class="mtg-title">${word}</span>
+                        <div class="mtg-mana-cost" onclick="document.getElementById('speak-btn').click()">
+                            <span class="material-icons-round" style="font-size: 16px; color: #333;">volume_up</span>
+                        </div>
+                    </div>
+
+                    <!-- Art -->
+                    <div class="mtg-art-container">
+                        <img src="${imageUrl}" alt="${word}" class="mtg-art" onerror="this.src='https://placehold.co/400x300?text=${word}'">
+                    </div>
+
+                    <!-- Type Line -->
+                    <div class="mtg-type-line">
+                        <span class="mtg-type-text">Artifact • ${data.ipa || '/.../'}</span>
+                        <div class="mtg-set-icon"></div>
+                    </div>
+
+                    <!-- Text Box -->
+                    <div class="mtg-text-box">
+                        <p class="mtg-definition">${data.zh}</p>
+                        <div class="mtg-flavor-text">
+                            "${data.en || 'The meaning of this word is ancient and powerful.'}"
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Info (Outside Frame) -->
+            <div class="mtg-bottom-info">
+                <span>${currentProgress}/${totalWords}</span>
+                <span>™ & © 2025 MAGIC-WORD</span>
+            </div>
+        </div>
+    `;
+
+    cardContainer.innerHTML = cardHtml;
+
+    // Preload next image
+    if (activeWords.length > 1) {
+        const nextWord = activeWords[1];
+        const nextData = dictionary[nextWord] || { en: '' };
+        const nextPrompt = `${nextWord} ${nextData.en} fantasy art illustration magic the gathering style`;
+        const nextImg = new Image();
+        nextImg.src = `https://image.pollinations.ai/prompt/${encodeURIComponent(nextPrompt)}?width=400&height=300&nologo=true`;
+    }
+}
+
+function markWord(type) {
+    const word = activeWords[currentIndex];
+
+    if (type === 'known') {
+        knownWords.push(word);
+    } else {
+        unknownWords.push(word);
+    }
+
+    saveProgress();
+
+    // Remove from active list
+    activeWords.splice(currentIndex, 1);
+
+    if (activeWords.length > 0) {
+        // Adjust index if needed
+        if (currentIndex >= activeWords.length) {
+            currentIndex = 0;
+        }
+        renderCard(activeWords[currentIndex]);
+    } else {
+        showCompletionState();
+    }
+}
+
+function showCompletionState() {
+    const hasUnknown = unknownWords.length > 0;
+    const message = hasUnknown
+        ? `You have ${unknownWords.length} words to review.`
+        : "You've mastered all the words!";
+
+    const reviewBtn = hasUnknown
+        ? '<button id="review-unknown-btn" class="level-btn" style="margin: 20px auto; max-width: 300px;">Review Unknown Words</button>'
+        : '';
+
+    cardContainer.innerHTML = `
+        <div class="loading-state">
+            <span class="material-icons-round" style="font-size: 48px; color: #51cf66;">check_circle</span>
+            <h2 style="margin-top: 16px;">Completed!</h2>
+            <p>${message}</p>
+            ${reviewBtn}
+        </div>
+    `;
+}
+
+function startReview() {
+    if (unknownWords.length === 0) return;
+
+    // Shuffle unknown words
+    activeWords = [...unknownWords].sort(() => Math.random() - 0.5);
+    unknownWords = [];
+    currentIndex = 0;
+    saveProgress();
+    renderCard(activeWords[currentIndex]);
+}
+
+function speakWord(word) {
+    if (!word) return;
+
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.85;
+
+    const voices = window.speechSynthesis.getVoices();
+    const preferredVoices = [
+        'Google US English',
+        'Samantha',
+        'Alex',
+        'Microsoft Zira - English (United States)'
+    ];
+
+    for (const preferred of preferredVoices) {
+        const voice = voices.find(v => v.name.includes(preferred));
+        if (voice) {
+            utterance.voice = voice;
+            break;
+        }
+    }
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+}
+
+function openStatsModal() {
+    updateStats();
+    openModal(statsModal);
+}
+
+function updateStats() {
+    document.getElementById('known-count').textContent = knownWords.length;
+    document.getElementById('unknown-count').textContent = unknownWords.length;
+
+    const unknownList = document.getElementById('unknown-list');
+    if (unknownWords.length === 0) {
+        unknownList.innerHTML = '<li style="opacity: 0.5;">No words yet</li>';
+    } else {
+        unknownList.innerHTML = unknownWords.map(word =>
+            `<li>${word} <span style="opacity: 0.7;">${dictionary[word]?.zh || ''}</span></li>`
+        ).join('');
+    }
+}
+
+function openModal(modal) {
+    modal.classList.remove('hidden');
+}
+
+function closeModal(modal) {
+    modal.classList.add('hidden');
+}
+
+function resetProgress() {
+    if (confirm('Are you sure you want to reset your progress for this level?')) {
+        localStorage.removeItem(`${currentLevel}_knownWords`);
+        localStorage.removeItem(`${currentLevel}_unknownWords`);
+        closeModal(settingsModal);
+        startGame(currentLevel);
+    }
+}
+
+function changeLevel() {
+    closeModal(settingsModal);
+    showLevelSelection();
+}
