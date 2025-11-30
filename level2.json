@@ -461,7 +461,8 @@
     },
     "trash": {
         "zh": "垃圾",
-        "ipa": "/træʃ/"
+        "ipa": "/træʃ/",
+        "en": "Waste material that is thrown away."
     },
     "value": {
         "zh": "價值",

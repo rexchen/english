@@ -306,6 +306,13 @@ body {
     transform: scale(0.95);
 }
 
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .action-btn.unknown {
     color: #ff6b6b;
     border-color: #ff6b6b;
