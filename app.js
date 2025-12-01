@@ -96,6 +96,9 @@ function startGame(level) {
         !knownWords.includes(word) && !unknownWords.includes(word)
     );
 
+    // Shuffle active words
+    activeWords.sort(() => Math.random() - 0.5);
+
     currentIndex = 0;
     isReviewMode = false; // Reset review mode
 
